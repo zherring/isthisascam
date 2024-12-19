@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is This KOL MemeCoin a Scam?</title>
+    <title>Hidden Joke</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,26 +13,47 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            text-align: center;
         }
         #hiddenDiv {
             display: none;
             margin-top: 20px;
         }
+        #extraText, #chanceText {
+            display: none;
+            margin-top: 10px;
+        }
+        .fake-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Is this KOL Memecoin a scam?</h1>
-    <p>An AI powered scam detection for memecoin projects, with special sentiment analysis for KOLs on X (formerly Twitter), Tiktok, and Youtube</p>
-    <input type="text" id="inputBox" placeholder="Type the memecoin ticker or link here.">
+    <input type="text" id="inputBox" placeholder="Type something here...">
     <div id="hiddenDiv">
-        <h2>It's probably a scam.</h2>
-        <p>Seriously. Most people lose money on these things.</p>
+        <h1>Surprise! You typed something.</h1>
+    </div>
+    <div class="fake-link" id="fakeLink">Seriously? Most people?</div>
+    <div id="extraText">
+        <p>Seriously, like 99%.</p>
+        <div class="fake-link" id="chanceLink">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGhuY3JtZThrODQ1aTd0djE0eWs2Z3BudWJodDJwajBiam94YnZ6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ToMjGpKniGqRNLGBrhu/giphy.gif"> <br />
+            So there's a chance?</div>
+    </div>
+    <div id="chanceText">
+        <p>Ah, yeah, I guess... ok yeah I guess there's a chance bu-</p>
+        <a href="https://pack.limo" target="_blank" class="fake-link">Shut up and take my money</a>
     </div>
 
     <script>
         const inputBox = document.getElementById('inputBox');
         const hiddenDiv = document.getElementById('hiddenDiv');
+        const fakeLink = document.getElementById('fakeLink');
+        const extraText = document.getElementById('extraText');
+        const chanceLink = document.getElementById('chanceLink');
+        const chanceText = document.getElementById('chanceText');
 
         inputBox.addEventListener('input', () => {
             if (inputBox.value.trim() !== '') {
@@ -40,6 +61,14 @@
             } else {
                 hiddenDiv.style.display = 'none';
             }
+        });
+
+        fakeLink.addEventListener('click', () => {
+            extraText.style.display = 'block';
+        });
+
+        chanceLink.addEventListener('click', () => {
+            chanceText.style.display = 'block';
         });
     </script>
 </body>
