@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is This KOL MemeCoin a Scam?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #hiddenDiv {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Is this KOL Memecoin a scam?</h1>
+    <p>An AI powered scam detection for memecoin projects, with special sentiment analysis for KOLs on X (formerly Twitter), Tiktok, and Youtube</p>
+    <input type="text" id="inputBox" placeholder="Type something here...">
+    <div id="hiddenDiv">
+        <h2>It's probably a scam.</h2>
+    </div>
+
+    <script>
+        const inputBox = document.getElementById('inputBox');
+        const hiddenDiv = document.getElementById('hiddenDiv');
+
+        inputBox.addEventListener('input', () => {
+            if (inputBox.value.trim() !== '') {
+                hiddenDiv.style.display = 'block';
+            } else {
+                hiddenDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
